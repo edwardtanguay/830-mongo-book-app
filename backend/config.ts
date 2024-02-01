@@ -1,3 +1,3 @@
-export const getAppName = () => {
-	return 'The Info Site';
+export const getPort = () => {
+	return 4889;
 }
