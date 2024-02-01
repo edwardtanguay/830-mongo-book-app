@@ -1,12 +1,20 @@
 import dotenv from 'dotenv';
+import * as tools from './tools';
 
 dotenv.config();
 
-export const getPort = () : number => {
-	return 4889;
+export const backendPort = (): number => {
+	return 4902;
 }
 
-export const getDbUrl = () : string => {
+export const frontendPort = (): number => {
+	const packageJsonObj = tools.readJsonFile('./package.json');
+	const devCommand = packageJsonObj.scripts.frontend;
+	const port = tools.extractPortNumber(devCommand);
+	return port;
+}
+
+export const dbUrl = (): string => {
 	const dbUrl = process.env.DB_URL;
 	if (typeof (dbUrl) === 'string') {
 		return dbUrl;
