@@ -1,14 +1,24 @@
 import express from 'express';
 import * as config from '../config';
 import cors from 'cors';
+import mongoose from 'mongoose';
 
 const app = express();
+app.use(express.json());
 app.use(cors());
 
 app.get('/', (_req, res) => {
 	res.send('<h1>Book Site API</h1>');
 });
 
-app.listen(config.getPort(), () => {
+const connectToDb = async () => {
+	try {
+		await mongoose.connect(config.getDbUrl());
 	console.log(`server is running at http://localhost:${config.getPort()}`);
-});
+	}
+	catch (error) {
+		console.log(`SERVER IS NOT RUNNING BECAUSE: ${error.message}`);
+	}
+}
+
+connectToDb();
