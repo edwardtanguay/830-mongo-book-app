@@ -3,6 +3,7 @@ import * as config from '../config';
 import cors from 'cors';
 import mongoose from 'mongoose';
 import * as tools from '../tools';
+import { booksRouter } from './routers/bookRouter';
 
 const app = express();
 app.use(express.json());
@@ -11,6 +12,8 @@ app.use(cors());
 app.get('/', (_req, res) => {
 	res.send('<h1>Book Site API</h1>');
 });
+
+app.use('/books', booksRouter);
 
 (async () => {
 	try {

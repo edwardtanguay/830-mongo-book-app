@@ -1,3 +1,6 @@
 - x change to concurrently
-- .. show back and front end ports
+- x show back and front end ports
+- .. copy over routes
+
+
 
