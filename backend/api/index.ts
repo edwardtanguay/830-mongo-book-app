@@ -14,7 +14,7 @@ app.get('/', (_req, res) => {
 (async () => {
 	try {
 		await mongoose.connect(config.getDbUrl());
-		console.log(`Server is running at: http://localhost:${config.getPort()}`);
+		app.listen(config.getPort(),() => console.log(`Server is running at: http://localhost:${config.getPort()}`));
 	}
 	catch (error) {
 		console.log(`SERVER IS NOT RUNNING BECAUSE: ${error.message}`);
