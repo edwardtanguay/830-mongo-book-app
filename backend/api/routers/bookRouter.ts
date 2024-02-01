@@ -1,7 +1,8 @@
 import express from 'express';
+import { getAllBooks } from '../controllers/bookController';
 
 export const booksRouter = express.Router();
 
-booksRouter.get('/', (_req, res) => {
-	res.send('in books');
-})
+booksRouter
+	.route('/')
+	.get(getAllBooks);

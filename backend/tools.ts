@@ -1,4 +1,6 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import fs from 'fs';
+import express from 'express';
 
 export const readJsonFile = (filePath: string) => {
 	const jsonData = fs.readFileSync(filePath, "utf8");
@@ -15,3 +17,7 @@ export const extractPortNumber = (text: string) => {
 export const clearConsole = (): void => {
 	process.stdout.write('\x1Bc');
 }
+
+export const handleError = (res: express.Response, error: any) => {
+	return res.status(500).json(error);
+};
