@@ -11,14 +11,12 @@ app.get('/', (_req, res) => {
 	res.send('<h1>Book Site API</h1>');
 });
 
-const connectToDb = async () => {
+(async () => {
 	try {
 		await mongoose.connect(config.getDbUrl());
-	console.log(`server is running at http://localhost:${config.getPort()}`);
+		console.log(`Server is running at: http://localhost:${config.getPort()}`);
 	}
 	catch (error) {
 		console.log(`SERVER IS NOT RUNNING BECAUSE: ${error.message}`);
 	}
-}
-
-connectToDb();
+})();
