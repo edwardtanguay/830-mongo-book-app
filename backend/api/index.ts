@@ -17,7 +17,10 @@ app.use('/books', booksRouter);
 
 (async () => {
 	try {
-		await mongoose.connect(config.dbUrl());
+		const connectionpOptions = {
+			dbName: 'booksite'
+		}
+		await mongoose.connect(config.dbUrl(), connectionpOptions);
 		app.listen(config.backendPort(), () => {
 			tools.clearConsole();
 			console.log(`---`);
