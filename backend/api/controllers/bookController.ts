@@ -21,3 +21,12 @@ export const getAllBooks = async (_req: express.Request, res: express.Response) 
 		handleError(res, error);
 	}
 }
+
+export const addSingleBook = async (req: express.Request, res: express.Response) => {
+  try {
+    const book = await Book.create(req.body);
+    res.status(201).json(book);
+  } catch (e) {
+    res.status(500).json(e);
+  }
+};

@@ -20,6 +20,7 @@ app.use('/books', booksRouter);
 		const connectionOptions = {
 			dbName: 'booksite'
 		}
+		mongoose.set("strictQuery", false);
 		await mongoose.connect(config.dbUrl(), connectionOptions);
 		app.listen(config.backendPort(), () => {
 			tools.clearConsole();
@@ -32,3 +33,15 @@ app.use('/books', booksRouter);
 		console.log(`SERVER IS NOT RUNNING BECAUSE: ${error.message}`);
 	}
 })();
+
+// const connectToDb = async () => {
+//   try {
+//     await mongoose.connect(config.dbUrl());
+//   } catch (e) {
+//     console.error(e);
+//   }
+// };
+
+// connectToDb().then(() =>
+//   app.listen(config.backendPort(),() => console.log(`server is running on ${config.backendPort()}`))
+// );
