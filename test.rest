@@ -5,7 +5,7 @@ POST {{url}}/books
 content-type: application/json
 	
 {
-	"title": "Book 006",
+	"title": "Book 005",
 	"authors": [
 		"John Granger",
 		"Jines Hooplaton"
@@ -41,15 +41,13 @@ POST {{url}}/users
 content-type: application/json
 	
 {
-	"firstName": "Tom",
+	"firstName": "James",
 	"lastName": "Morgan",
-	"mobile": 30151923190,
-	"email": "tom.morgan@htl.com",
+	"email": "james.morgan@htl.com",
 	"address" : {
-		"street": "Holework Street",
-		"city": "Birmingham",
+		"street": "Holework Street 23",
 		"zipCode": 31239,
-		"state": "Northingham"
+		"city": "Birmingham"
 	}
 }
 

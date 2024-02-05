@@ -8,9 +8,8 @@ export const userSchema = new mongoose.Schema(
 		email: String,
 		address: {
 			street: String,
-			number: String,
 			zipCode: String,
-			state: String,
+			city: String,
 		},
 	},
 	{
