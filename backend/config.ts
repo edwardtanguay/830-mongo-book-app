@@ -1,5 +1,6 @@
 import dotenv from 'dotenv';
 import * as tools from './tools';
+import * as config from './config';
 
 dotenv.config();
 
@@ -21,4 +22,8 @@ export const dbUrl = (): string => {
 	} else {
 		return '';
 	}
+}
+
+export const backendUrl = (): string => {
+	return `http://localhost:${config.backendPort()}`;
 }
