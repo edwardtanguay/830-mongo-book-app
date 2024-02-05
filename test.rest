@@ -26,7 +26,7 @@ GET {{url}}/books/65c041844c41360d85e13774
 ### DELETE SINGLE BOOK
 DELETE {{url}}/books/65c041844c41360d85e13774
 
-### PATCH SINGLE BOOK
+### UPDATE SINGLE BOOK
 PATCH {{url}}/books/65c041804c41360d85e13772
 content-type: application/json
 	
@@ -34,11 +34,9 @@ content-type: application/json
 	"pages": 999
 }
 
+####################################################################
 
-### GET USERS
-GET {{url}}/users
-	
-### ADD A USER 
+### ADD SINGLE USER 
 POST {{url}}/users
 content-type: application/json
 	
@@ -53,4 +51,25 @@ content-type: application/json
 		"zipCode": 31239,
 		"state": "Northingham"
 	}
+}
+
+
+### GET ALL USERS
+GET {{url}}/users
+	
+### DELETE ALL USERS
+DELETE {{url}}/users
+
+### GET SINGLE USER
+GET {{url}}/users/65c046462d823d3c4e827317
+
+### DELETE SINGLE USER
+DELETE {{url}}/users/65c046462d823d3c4e827319
+
+### UPDATE SINGLE USER
+PATCH {{url}}/users/65c046472d823d3c4e82731b
+content-type: application/json
+	
+{
+	"mobile": 999
 }

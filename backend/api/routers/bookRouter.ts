@@ -1,14 +1,14 @@
 import express from 'express';
 import { addSingleBook, deleteAllBooks, deleteSingleBook, getAllBooks, getSingleBook, updateSingleBook } from '../controllers/bookController';
 
-export const booksRouter = express.Router();
+export const bookRouter = express.Router();
 
-booksRouter
+bookRouter
 	.route('/')
 	.post(addSingleBook)
 	.get(getAllBooks)
 	.delete(deleteAllBooks);
-booksRouter
+bookRouter
 	.route('/:id')
 	.get(getSingleBook)
 	.delete(deleteSingleBook)
