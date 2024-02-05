@@ -1,15 +1,11 @@
 @url = http://localhost:4902
 
-
-### GET BOOKS
-GET {{url}}/books
-	
-### ADD A BOOK
+### ADD SINGLE BOOK
 POST {{url}}/books
 content-type: application/json
 	
 {
-	"title": "Book 001",
+	"title": "Book 006",
 	"authors": [
 		"John Granger",
 		"Jines Hooplaton"
@@ -17,6 +13,27 @@ content-type: application/json
 	"pages": 812,
 	"available": true
 }
+
+### GET ALL BOOKS
+GET {{url}}/books
+	
+### DELETE ALL BOOKS
+DELETE {{url}}/books
+
+### GET SINGLE BOOK
+GET {{url}}/books/65c041844c41360d85e13774
+	
+### DELETE SINGLE BOOK
+DELETE {{url}}/books/65c041844c41360d85e13774
+
+### PATCH SINGLE BOOK
+PATCH {{url}}/books/65c041804c41360d85e13772
+content-type: application/json
+	
+{
+	"pages": 999
+}
+
 
 ### GET USERS
 GET {{url}}/users

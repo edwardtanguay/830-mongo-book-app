@@ -1,9 +1,15 @@
 import express from 'express';
-import { addSingleBook, getAllBooks } from '../controllers/bookController';
+import { addSingleBook, deleteAllBooks, deleteSingleBook, getAllBooks, getSingleBook, updateSingleBook } from '../controllers/bookController';
 
 export const booksRouter = express.Router();
 
 booksRouter
 	.route('/')
+	.post(addSingleBook)
 	.get(getAllBooks)
-	.post(addSingleBook);
+	.delete(deleteAllBooks);
+booksRouter
+	.route('/:id')
+	.get(getSingleBook)
+	.delete(deleteSingleBook)
+	.patch(updateSingleBook);
