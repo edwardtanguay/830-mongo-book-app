@@ -4,9 +4,7 @@
 
 ![grafik](https://github.com/edwardtanguay/830-mongo-book-app/assets/446574/93410dff-a5f0-4814-8b07-704616902efb)
 
-![grafik](https://github.com/edwardtanguay/830-mongo-book-app/assets/446574/edd5c150-01b5-4f36-aff9-701fffe36c20)
-
-![grafik](https://github.com/edwardtanguay/830-mongo-book-app/assets/446574/36bdc87d-39fb-443e-9f13-1cb70afcf453)
+![grafik](https://github.com/edwardtanguay/830-mongo-book-app/assets/446574/edd5c150-01b5-4f36-aff9-701fffe36c20
 
 
 ## setup
